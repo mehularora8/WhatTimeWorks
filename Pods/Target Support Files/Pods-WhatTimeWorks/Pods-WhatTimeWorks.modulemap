@@ -1,0 +1,6 @@
+framework module Pods_WhatTimeWorks {
+  umbrella header "Pods-WhatTimeWorks-umbrella.h"
+
+  export *
+  module * { export * }
+}
