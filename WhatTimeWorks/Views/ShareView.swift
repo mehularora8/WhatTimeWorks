@@ -23,8 +23,10 @@ struct ShareView: View{
                 Text("Share your event")
                     .font(Font.system(size: 30, weight: .semibold, design: .rounded))
                     .padding(.vertical)
+                    .foregroundColor(.white)
                 
                 Text("Share this event by copying the ID below and sending it to everyone you would like to attend the event.")
+                    .foregroundColor(.white)
                 
                 HStack{
                     Spacer()
