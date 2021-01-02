@@ -2,7 +2,7 @@
 
 WhatTimeWorks is an organization application that helps you get availabilities and schedule events when a large number of people are involved. 
 
-![Landing Page](https://github.com/mehularora8/WhatTimeWorks/tree/main/Images/Landing.png)
+![Landing Page](Images/Landing.jpg?raw=true)
 
 # Create Event:
 
