@@ -10,11 +10,10 @@
 
 /*
  Showing users who responded to which events and on what times
- Make UI nicer
  - Fix dark mode on responses
- - Fix landing page, make prettier.
  - Move functions to Viewmodel
  - Allow users to delete events
+ - remove copy view and copy in place
  */
 
 import SwiftUI

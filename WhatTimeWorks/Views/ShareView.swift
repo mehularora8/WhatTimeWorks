@@ -14,25 +14,38 @@ struct ShareView: View{
     var id: String
     
     var body: some View{
-        VStack {
-            HStack{
-                Spacer()
-                Text(id)
-                Image(systemName: "doc.on.doc.fill")
-                    .onTapGesture {
-                        withAnimation(.easeInOut) {
-                            self.successfullyCopied = true
-                        }
-                        UIPasteboard.general.string = self.id
-                    }
-                Spacer()
-            }
+        ZStack {
+            Rectangle()
+                .fill(Colors.matteBlack)
+                .edgesIgnoringSafeArea(.all)
             
-            if self.successfullyCopied {
-                Text("Copied!")
-                    .foregroundColor(Colors.lightGray)
+            VStack {
+                Text("Share your event")
+                    .font(Font.system(size: 30, weight: .semibold, design: .rounded))
+                    .padding(.vertical)
+                
+                Text("Share this event by copying the ID below and sending it to everyone you would like to attend the event.")
+                
+                HStack{
+                    Spacer()
+                    Text(id)
+                    Image(systemName: "doc.on.doc.fill")
+                        .onTapGesture {
+                            withAnimation(.easeInOut) {
+                                self.successfullyCopied = true
+                            }
+                            UIPasteboard.general.string = self.id
+                        }
+                    Spacer()
+                }
+                    .foregroundColor(.white)
+                
+                if self.successfullyCopied {
+                    Text("Copied!")
+                        .foregroundColor(Colors.lightGray)
+                }
             }
+                .padding()
         }
-            .padding()
     }
 }
